@@ -1,0 +1,77 @@
+/* --- GLOBAL RESET & TYPOGRAPHY --- */
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Inter', sans-serif; }
+body { display:flex; flex-direction:column; height:100vh; background-color: #f1f5f9; color: #334155; }
+
+/* --- HEADER (Dark Slate, Minimalist) --- */
+#header { 
+  background: #0f172a; /* Warna hitam kebiruan pekat ala premium dashboard */
+  color: #f8fafc; 
+  padding: 14px 24px; 
+  display:flex; 
+  align-items:center; 
+  gap: 20px; 
+  border-bottom: 1px solid #1e293b;
+  z-index: 1001; 
+}
+.logo { font-size: 1.25rem; font-weight: 700; letter-spacing: 1px; color: #ffffff; }
+.subtitle { font-size: 0.85rem; font-weight: 400; color: #94a3b8; border-left: 1px solid #334155; padding-left: 20px; }
+
+/* --- MAP AREA --- */
+#map { flex:1; width: 100%; z-index: 1; }
+
+/* --- SIDEBAR & PANELS --- */
+#sidebar { 
+  position:absolute; 
+  top: 80px; 
+  left: 20px; 
+  z-index:1000; 
+  width: 280px; 
+  display:flex; 
+  flex-direction:column; 
+  gap: 16px; 
+}
+.panel { 
+  background: #ffffff; 
+  border-radius: 8px; 
+  padding: 16px; 
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* Judul Panel: Kecil, Kapital, Rapi */
+.panel h3 { 
+  font-size: 0.7rem; 
+  text-transform: uppercase; 
+  letter-spacing: 0.08em; 
+  color: #64748b; 
+  margin-bottom: 12px; 
+  font-weight: 600; 
+}
+
+/* --- BUTTONS --- */
+.btn-group { display:flex; gap: 8px; background: #f1f5f9; padding: 4px; border-radius: 6px; border: 1px solid #e2e8f0; }
+.btn { 
+  flex:1; padding: 6px 0; border: none; border-radius: 4px; background: transparent; 
+  color: #64748b; font-size: 0.85rem; font-weight: 500; cursor:pointer; transition: all 0.2s; 
+}
+.btn:hover { color: #0f172a; }
+.btn.active { background: #ffffff; color: #0f172a; box-shadow: 0 1px 3px rgba(0,0,0,0.1); font-weight: 600; }
+
+/* --- CHECKBOXES --- */
+.custom-checkbox { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; color: #334155; margin-bottom: 10px; cursor: pointer; }
+.custom-checkbox input { accent-color: #0f172a; width: 16px; height: 16px; cursor: pointer; }
+
+/* --- STATISTIK --- */
+#stat-content { font-size: 0.85rem; line-height: 1.8; color: #475569; }
+#stat-content b { color: #0f172a; font-weight: 600; }
+
+/* --- LEGENDA KOTAK WARNA --- */
+.leg { display:flex; align-items:center; gap: 12px; font-size: 0.8rem; margin-bottom: 8px; color: #475569; }
+.leg span { display:inline-block; width: 16px; height: 16px; border-radius: 3px; }
+.box-red { background: #F44336; border: 1px solid #B71C1C; }
+.box-yellow { background: #FFE082; border: 1px solid #F6C000; }
+.box-green { background: #A5D6A7; border: 1px solid #66BB6A; }
+
+/* --- OVERRIDE LEAFLET POPUP MASA KINI --- */
+.leaflet-popup-content-wrapper { border-radius: 6px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+.leaflet-popup-content { font-family: 'Inter', sans-serif; color: #334155; }

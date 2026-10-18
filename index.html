@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='id'><head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>GeoVista — Pengendalian Tata Ruang Kota Semarang</title>
+  <link rel='stylesheet' href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css'/>
+  <link rel='stylesheet' href='style.css'/>
+</head><body>
+  <div id='header'>
+    <h1>🌐 GeoVista</h1>
+    <span>Sistem Deteksi Ketidaksesuaian Pemanfaatan Lahan — Kota Semarang</span>
+  </div>
+  <div id='sidebar'>
+    <div class='panel'>
+      <h3>📅 Periode Analisis</h3>
+      <div class='btn-group'>
+        <button class='btn active' data-year='2023'>2023</button>
+        <button class='btn' data-year='2021'>2021</button>
+        <button class='btn' data-year='2019'>2019</button>
+      </div>
+    </div>
+    <div class='panel'>
+      <h3>🗂️ Tampilkan Layer</h3>
+      <label><input type='checkbox' id='cb-mismatch' checked> Area Mismatch</label><br>
+      <label><input type='checkbox' id='cb-rtrw'> Zonasi RTRW</label>
+    </div>
+    <div class='panel' id='stats'>
+      <h3>📊 Statistik</h3>
+      <div id='stat-content'>Pilih periode...</div>
+    </div>
+    <div class='panel'>
+      <h3>🗺️ Legenda</h3>
+      <div class='leg'><span style='background:#F44336; border-color:#B71C1C;'></span> Mismatch (Tidak Sesuai)</div>
+      <div class='leg'><span style='background:#FFE082; border-color:#FFCA28;'></span> RTRW - Kawasan Terbangun</div>
+      <div class='leg'><span style='background:#A5D6A7; border-color:#81C784;'></span> RTRW - Non-Terbangun</div>
+    </div>
+  </div>
+  <div id='map'></div>
+  <script src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'></script>
+  <script src='app.js'></script>
+</body></html>
